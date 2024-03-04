@@ -1,0 +1,16 @@
+name: release
+
+on:
+  push:
+    branches: [main]
+  create:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v2
